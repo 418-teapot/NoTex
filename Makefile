@@ -5,7 +5,7 @@ MINTED_TEMP = _minted-$(MYNAME)
 
 TEX     = latexmk -xelatex
 MODE    = -shell-escape
-CD		= -cd ../
+CD      = -cd ../
 OUTDIR  = -outdir=build
 
 all: $(PDF)
