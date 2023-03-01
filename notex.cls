@@ -2,6 +2,7 @@
 
 \LoadClass[UTF8]{ctexrep}
 
+% 设置备用字体
 \xeCJKsetup{AutoFallBack = true}
 \setCJKfallbackfamilyfont{\CJKrmdefault}{
     {Source Han Serif SC},
@@ -9,6 +10,7 @@
     {PingFangSC-Regular}
 }
 
+% 设置页面格式
 \RequirePackage{geometry}
 \geometry{
     inner = 1in,
@@ -17,6 +19,7 @@
     marginparwidth = 1in,
 }
 
+% 设置封面格式
 \renewcommand*\maketitle{
     \thispagestyle{empty}
     \vspace*{\stretch{0.5}}
@@ -34,7 +37,7 @@
 \RequirePackage[usenames, dvipsnames]{xcolor}
 \definecolor{light-gray}{gray}{0.95}
 
-% code highlight
+% 设置代码高亮
 \RequirePackage[outputdir=build]{minted}
 \setminted{
     bgcolor = light-gray,
@@ -47,6 +50,7 @@
 \RequirePackage{enumitem}
 \AddEnumerateCounter{\chinese}{\chinese}{}
 
+% 设置绘图环境
 \RequirePackage{tikz}
 \usetikzlibrary{arrows, arrows.meta, backgrounds, calc, decorations.pathreplacing, positioning}
 
@@ -63,6 +67,7 @@
 
 \RequirePackage{booktabs}
 
+% 设置算法环境
 \RequirePackage[ruled, linesnumbered]{algorithm2e}
 
 \RequirePackage{amsthm}
@@ -71,6 +76,7 @@
 \newlength{\spacelength}
 \settowidth{\spacelength}{\normalfont\ }
 
+% 设置定义、定理、证明环境
 \declaretheoremstyle[
     headfont = {\bfseries\sffamily\footnotesize},
     notefont = {\normalfont},
