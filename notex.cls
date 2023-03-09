@@ -52,7 +52,18 @@
 
 % 设置绘图环境
 \RequirePackage{tikz}
-\usetikzlibrary{arrows, arrows.meta, backgrounds, calc, decorations.pathreplacing, positioning}
+\usetikzlibrary{
+    arrows,
+    arrows.meta,
+    backgrounds,
+    calc,
+    chains,
+    decorations.pathreplacing,
+    graphs,
+    matrix,
+    positioning,
+    quotes,
+}
 
 \newenvironment{tikzfig}
     {
