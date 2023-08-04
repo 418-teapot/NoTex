@@ -50,32 +50,7 @@
 \RequirePackage{enumitem}
 \AddEnumerateCounter{\chinese}{\chinese}{}
 
-% 设置绘图环境
-\RequirePackage{tikz}
-\usetikzlibrary{
-    arrows,
-    arrows.meta,
-    backgrounds,
-    calc,
-    chains,
-    decorations.pathreplacing,
-    graphs,
-    matrix,
-    positioning,
-    quotes,
-}
-
-\newenvironment{tikzfig}
-    {
-        \begin{figure}[!ht]
-        \centering
-        \begin{tikzpicture}[node font=\small]
-    }
-    {
-        \end{tikzpicture}
-        \end{figure}
-    }
-
+% 表格扩展包
 \RequirePackage{booktabs}
 
 % 设置算法环境
