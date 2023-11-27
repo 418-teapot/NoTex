@@ -1,8 +1,8 @@
 %===-- NoTex.cls - Document Class ------------------------------------------===%
 %
 %===------------------------------------------------------------------------===%
-\NeedsTexFormat{LaTex2e}
-\ProvidesClass{NoTex}[2023/11/27 v0.0.4]
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesClass{NoTex/NoTex}[2023/11/27 v0.0.4]
 
 % Based on ctexrep.
 \LoadClass[UTF8]{ctexrep}
@@ -27,7 +27,7 @@
     \vspace{\stretch{2}}
 }
 
-\RequirePackage{Style/Page}
-\RequirePackage{Style/Code}
-\RequirePackage{Style/Algo}
-\RequirePackage{Style/Theorem}
+\RequirePackage{NoTex/Style/Page}
+\RequirePackage{NoTex/Style/Code}
+\RequirePackage{NoTex/Style/Algo}
+\RequirePackage{NoTex/Style/Theorem}

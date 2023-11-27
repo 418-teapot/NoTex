@@ -1,4 +1,4 @@
-NOTEX   = notex
+NOTEX   = NoTex
 PDF     = $(MYNAME).pdf
 REQUIRE = $(NOTEX).cls
 MINTED_TEMP = _minted-$(MYNAME)

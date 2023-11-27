@@ -1,11 +1,18 @@
 %===-- Style/Theorem.sty - Theorem and Proof Format Style ------------------===%
 %
 %===------------------------------------------------------------------------===%
-\NeedsTexFormat{LaTex2e}
-\ProvidesPackage{Theorem}[2023/11/27 v0.0.4]
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{NoTex/Style/Theorem}[2023/11/27 v0.0.4]
 
+% Include color tools.
 \RequirePackage{color}
 \RequirePackage[usenames, dvipsnames]{xcolor}
+\RequirePackage[many]{tcolorbox}
+
+\RequirePackage{amsthm}
+\RequirePackage{thmtools}
+\newlength{\spacelength}
+\settowidth{\spacelength}{\normalfont\ }
 
 \declaretheoremstyle[
     headfont = {\bfseries\sffamily\footnotesize},
