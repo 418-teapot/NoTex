@@ -1,0 +1,20 @@
+%===-- Style/Code.sty - Code Format Style ----------------------------------===%
+%
+%===------------------------------------------------------------------------===%
+\NeedsTexFormat{LaTex2e}
+\ProvidesPackage{Code}[2023/11/27 v0.0.4]
+
+% Set color.
+\RequirePackage{color}
+\RequirePackage[usenames, dvipsnames]{xcolor}
+\providecolor{light-gray}{gray}{0.95}
+
+% Set code style.
+\RequirePackage[outputdir=build]{minted}
+\setminted{
+    bgcolor = light-gray,
+    xleftmargin = \parindent,
+    linenos = true,
+    autogobble = true,
+    mathescape = true
+}

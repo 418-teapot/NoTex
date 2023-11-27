@@ -1,0 +1,22 @@
+%===-- Style/Page.sty - Page Format Style ----------------------------------===%
+%
+%===------------------------------------------------------------------------===%
+\NeedsTexFormat{LaTex2e}
+\ProvidesPackage{Page}[2023/11/27 v0.0.4]
+
+% Set page layout.
+\RequirePackage{geometry}
+\geometry{
+    inner = 1in,
+    outer = 1.5in,
+    vmargin = 1in,
+    marginparwidth = 1in,
+}
+
+% Set table format.
+\RequirePackage{multirow}
+\RequirePackage{booktabs}
+
+% Set enum format.
+\RequirePackage{enumitem}
+\AddEnumerateCounter{\chinese}{\chinese}{}

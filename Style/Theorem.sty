@@ -1,68 +1,12 @@
-\ProvidesClass{NoTex}[2023/02/28 v0.0.3]
-
-\LoadClass[UTF8]{ctexrep}
-
-% 设置备用字体
-\xeCJKsetup{AutoFallBack = true}
-\setCJKfallbackfamilyfont{\CJKrmdefault}{
-    {Source Han Serif SC},
-    {Source Han Serif CN},
-    {PingFangSC-Regular}
-}
-
-% 设置页面格式
-\RequirePackage{geometry}
-\geometry{
-    inner = 1in,
-    outer = 1.5in,
-    vmargin = 1in,
-    marginparwidth = 1in,
-}
-
-% 设置封面格式
-\renewcommand*\maketitle{
-    \thispagestyle{empty}
-    \vspace*{\stretch{0.5}}
-    \noindent\begin{minipage}{\textwidth}
-    \raggedleft
-    {\huge \bfseries \@title}
-    \noindent\rule[-1ex]{\textwidth}{5pt}\\[2.5ex]
-    \end{minipage}
-    \vspace{\stretch{2}}
-}
-
-\RequirePackage{multirow}
+%===-- Style/Theorem.sty - Theorem and Proof Format Style ------------------===%
+%
+%===------------------------------------------------------------------------===%
+\NeedsTexFormat{LaTex2e}
+\ProvidesPackage{Theorem}[2023/11/27 v0.0.4]
 
 \RequirePackage{color}
 \RequirePackage[usenames, dvipsnames]{xcolor}
-\definecolor{light-gray}{gray}{0.95}
 
-% 设置代码高亮
-\RequirePackage[outputdir=build]{minted}
-\setminted{
-    bgcolor = light-gray,
-    xleftmargin = \parindent,
-    linenos = true,
-    autogobble = true,
-    mathescape = true
-}
-
-\RequirePackage{enumitem}
-\AddEnumerateCounter{\chinese}{\chinese}{}
-
-% 表格扩展包
-\RequirePackage{booktabs}
-
-% 设置算法环境
-\RequirePackage[ruled, linesnumbered]{algorithm2e}
-
-\RequirePackage{amsthm}
-\RequirePackage[many]{tcolorbox}
-\RequirePackage{thmtools}
-\newlength{\spacelength}
-\settowidth{\spacelength}{\normalfont\ }
-
-% 设置定义、定理、证明环境
 \declaretheoremstyle[
     headfont = {\bfseries\sffamily\footnotesize},
     notefont = {\normalfont},
@@ -88,8 +32,8 @@
     breakable,
 }
 \declaretheorem[style=theorem]{theorem}
-
 \theoremstyle{theorem}
+
 \newtheorem{definition}{Definition}
 \tcolorboxenvironment{definition}{
     boxrule = 0pt,
