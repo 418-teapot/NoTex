@@ -5,16 +5,16 @@ MINTED_TEMP = _minted-$(MYNAME)
 
 TEX     = latexmk -xelatex
 MODE    = -shell-escape
-CD      = -cd ../
+FILE    = -cd ../$(MYNAME)
 OUTDIR  = -outdir=build
 
 all: $(PDF)
 
 $(PDF): $(REQUIRE) FORCE_MAKE
-	$(TEX) $(MODE) $(CD)$(MYNAME) $(OUTDIR)
+	$(TEX) $(MODE) $(FILE) $(OUTDIR)
 
 clean:
-	$(TEX) -C $(CD)$(MYNAME) $(OUTDIR)
+	$(TEX) -C $(FILE) $(OUTDIR)
 	rm -r ../build/$(MINTED_TEMP)
 
 .PHONY: all clean FORCE_MAKE
